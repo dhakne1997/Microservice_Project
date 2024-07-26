@@ -1,0 +1,81 @@
+server:
+  port: 6006
+spring:
+  application:
+    name: CONFIG-SERVER
+
+
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    
+    
+    
+    
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dhakne1997/microservice-tutorial.git
+          branch: main
+          clone-on-start: true
+          username: dhakne1997  
+          password: Dhakne@1997
+#
+#
+#
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:6004/eureka
+      
+      
+      
+#server:
+#  port: 6006
+
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: root
+ 
+    
+#
+#  config:
+#    import: optional:configserver:http://localhost:6004/eureka
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
+#okta:
+#  oauth2:
+#    issuer: https://dev-77584981.okta.com/oauth2/default
+#    audience: api://default
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:6004/eureka
+
