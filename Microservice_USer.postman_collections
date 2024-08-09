@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "2a20af48-34fe-4bc9-b130-be48fa65426b",
+		"name": "Microservice_USer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:6000/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\":\"4\",\r\n  \"name\": \"shara\",\r\n  \"email\": \"parag@gmail.com\",\r\n  \"about\": \"hello\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6001/users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:6000/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:6001/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Hoteladd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"dhakne\",\r\n  \"location\": \"latur\",\r\n  \"about\": \"java\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6002/hotels"
+			},
+			"response": []
+		},
+		{
+			"name": "HotelGet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:6002/hotels/557b53a8-12fa-4efa-906e-307e7fa1233b"
+			},
+			"response": []
+		},
+		{
+			"name": "Ratingadd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ratingId\":\"2\",\r\n  \"userId\": \"2\",\r\n  \"hotelId\": \"3\",\r\n  \"rating\": 5,\r\n  \"feedback\": \"good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6003/ratings"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:6003/ratings/users/61356304-e0fd-4f57-8417-f6530238ddea",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:6003/ratings/users/61356304-e0fd-4f57-8417-f6530238ddea"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:6002/staffs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:6002/staffs"
+			},
+			"response": []
+		}
+	]
+}
